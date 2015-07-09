@@ -30,4 +30,10 @@ public class TestService {
     public String test() {
         return "Hello Mutt";
     }
+    
+    @GET
+    @Path("/git")
+    public String git() {
+        return "Hello there";
+    }
 }
