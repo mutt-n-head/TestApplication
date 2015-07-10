@@ -34,6 +34,6 @@ public class TestService {
     @GET
     @Path("/git")
     public String git() {
-        return "Hello there";
+        return "Hello there from git";
     }
 }
