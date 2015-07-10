@@ -18,7 +18,7 @@ import javax.ejb.Stateless;
  * @author lisner
  */
 @Stateless
-public class TestBean implements TestBeanRemote, TestBeanLocal {
+public class TestBean implements TestBeanLocal {
 
     @Override
     public String helloThere() {
