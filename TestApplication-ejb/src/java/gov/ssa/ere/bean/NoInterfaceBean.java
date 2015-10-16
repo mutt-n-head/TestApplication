@@ -6,11 +6,13 @@
 
 package gov.ssa.ere.bean;
 
+import gov.ssa.ere.bean.interceptors.SampleInterceptor;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.ejb.Asynchronous;
 import javax.ejb.Stateless;
 import javax.ejb.LocalBean;
+import javax.interceptor.Interceptors;
 
 /**
  *
@@ -48,5 +50,17 @@ public class NoInterfaceBean {
         } catch (InterruptedException ex) {
             Logger.getLogger(NoInterfaceBean.class.getName()).log(Level.SEVERE, null, ex);
         }
+    }
+
+    @Interceptors(SampleInterceptor.class)
+    public String echoService(String _inputStr, Integer _ct) {
+        String retStr = "";
+
+        for (Integer i = 1; i <= _ct; i++) {
+            retStr += _inputStr;
+            retStr += " ... ";
+        }
+
+        return retStr;
     }
 }
