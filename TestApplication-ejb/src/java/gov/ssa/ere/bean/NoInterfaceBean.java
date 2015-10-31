@@ -35,7 +35,10 @@ public class NoInterfaceBean {
         try {
             Thread.sleep(20000);
         } catch (InterruptedException ex) {
-            Logger.getLogger(NoInterfaceBean.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(
+                    NoInterfaceBean.class.getName()).log(Level.SEVERE,
+                    null,
+                    ex);
         }
     }
     
@@ -48,7 +51,10 @@ public class NoInterfaceBean {
         try {
             Thread.sleep(20000);
         } catch (InterruptedException ex) {
-            Logger.getLogger(NoInterfaceBean.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(
+                    NoInterfaceBean.class.getName()).log(Level.SEVERE,
+                    null,
+                    ex);
         }
     }
 
